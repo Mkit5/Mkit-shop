@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <title>Online Shoping</title>
+</head>
+
+<body>
+ <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-3 d-none d-lg-block">      
+             <h5>Welcome to our store</h5>  
+           </div>
+            <div class="col-3 d-none d-lg-block">      
+             <h5>Telephone:155535357</h5>  
+           </div>
+           <div class="col-6 col-lg-2 ">
+            <select class="custom-select">
+               <option selected>ENG</option>
+                 <option value="1">РУС</option>
+                  <option value="2">ՀԱՅ</option>
+                </select>
+              </div>
+              <div class="col-6 col-lg-2">
+            <select class="custom-select">
+               <option selected>$</option>
+                 <option value="1">֏</option>
+                  <option value="2">₽</option>
+                </select>
+              </div>
+              <div class="col-2 d-none d-lg-block">
+                 <button type="button" class="btn btn-primary">
+                 Wishlist <span class="badge badge-light">5</span>
+                 </button>
+              </div>
+          </div>
+                <nav class="navbar navbar-danger bg-danger">
+                  <div class="col-5">
+               <img src="data:image/jpeg;base64,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" width="100px">
+             </div>
+             <div class="col-5 d-none d-lg-block">
+                <form class="form-inline">
+                   <input class="form-control mr-sm-2" type="search" placeholder="  Search" aria-label="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                 </form>
+               </div>
+                   <div class="dropdown col-4 col-lg-2">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 My Account
+                           </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#"  data-toggle="modal" data-target="#LoginModal">Login</a>
+                      
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#RegisterModal">Register</a>
+                   <a class="dropdown-item" href="#">My orders</a>
+                   <a class="dropdown-item" href="#">Accout Setings</a>
+                 </div>
+                </div>
+                </nav>
+                <nav class="navbar navbar-light" style="background-color: 
+ #0066ff;">
+                <div class="dropdown ">
+  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sport Accessories
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Football</a>
+    <a class="dropdown-item" href="#">Basketball</a>
+    <a class="dropdown-item" href="#">volleyball</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Phone
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Iphone</a>
+    <a class="dropdown-item" href="#">Samsung</a>
+    <a class="dropdown-item" href="#">Huawei</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Playstation
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Ps4</a>
+    <a class="dropdown-item" href="#">Ps3</a>
+    <a class="dropdown-item" href="#">Ps2</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Computer
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Samsung</a>
+    <a class="dropdown-item" href="#">Mac Book</a>
+    <a class="dropdown-item" href="#">Deel</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Cars
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Mersedes-benz</a>
+    <a class="dropdown-item" href="#">BMW</a>
+    <a class="dropdown-item" href="#">Nissan</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    House
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Big house</a>
+    <a class="dropdown-item" href="#">Small house</a>
+    <a class="dropdown-item" href="#">House</a>
+  </div>
+</div>
+                  </header>
+          
+          <br>
+      <section class="filtering-and-nav">
+        <div class="main">
+            <div class="section-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                     <li class="breadcrumb-item"><a href="#">Iphone</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Iphone 11</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-lg-4" style="width: 100%;">
+                            <div style="display: inline-flex; width: 100%;">
+                                <div style="vertical-align: middle; margin-top: 10px;">
+                                    <span>Sort by: &nbsp;</span>
+                                </div>
+                                <div style="width: 80%; margin-top: 3px;">
+                                    <select class="form-control" id="slcSorting">
+                                        <option>Date</option>
+                                        <option>Low price</option>
+                                        <option>High price</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <br>
+      <section class="main-goods">
+          <div class="main">
+              <div class="section-body">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 col-12 text-light border border-light" style="background: orange; padding: 15px;">
+                            <div class="col">
+                                <a  class="text-primary" data-toggle="collapse" style="cursor: pointer;" data-target="#collapseBrand" aria-expanded="false" aria-controls="collapseBrand">
+                                    Iphone 11
+                                </a>
+                                <div class="collapse " style="font-size: 15px; margin-left: 3%;" id="collapseBrand">
+                                    <div>
+                                        <a href="">Iphone 11</a><br>
+                                        <a href="">Iphone 11 pro</a><br>
+                                        <a href="">Iphone 11 pro max</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="col">
+                                <a  class="text-primary" data-toggle="collapse" style="cursor: pointer;" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                                    Select Color
+                                </a>
+                                <div class="collapse" style="font-size: 15px; margin-left: 3%;" id="collapseExample1">
+                                    <div>
+                                        <a href="">Red</a><br>
+                                        <a href="">Green</a><br>
+                                        <a href="">Yellow</a><br>
+                                        <a href="">black</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="col">
+                                <a  class="text-primary" data-toggle="collapse" style="cursor: pointer;" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                    Select Storage 
+                                </a>
+                                <div class="collapse" style="font-size: 15px; margin-left: 3%;" id="collapseExample2">
+                                    <div>
+                                        <a href="">32GB</a><br>
+                                        <a href="">64GB</a><br>
+                                        <a href="">128GB</a><br>
+                                        <a href="">256GB</a>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="dropdown-divider"></div>
+                            <div class="col">
+                                <a  class="text-primary" data-toggle="collapse" style="cursor: pointer;" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                                    Iphone 11 pro max Color
+                                </a>
+                                <div class="collapse" style="font-size: 15px; margin-left: 3%;" id="collapseExample5">
+                                    <div>
+                                        <a href="">Midnight Green</a><br>
+                                        <a href="">Space gray</a><br>
+                                        <a href="">Silver</a><br>
+                                        <a href="">Gold</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="col">
+                                <div class="text-primary custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">Made in China</label>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="col">
+                                <div class="text-primary custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                    <label class="custom-control-label" for="customSwitch2">with case</label>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                        <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card bg-dark text-black ">
+                                            <img class="card-img" src="https://9to5mac.com/wp-content/uploads/sites/6/2019/10/iPhone-11-Pro-Max.jpg?quality=82&strip=all&w=1600" style="height: 300px; object-fit: cover;" alt="Card image">
+                                            <div class="card-img-overlay" style="background: rgba(0, 0, 0, .1);">
+                                              <h5 class="card-title">Iphone 11 pro max</h5>
+                                              <p class="card-text">
+                                              Apple
+                                                 iPhone 11 Pro 512GB black T-Mobile
+                                                <br> <strong class="text-danger">$ 1000</strong>
+                                                <br>
+                                                <button class="btn btn-sm btn-primary">
+                                                    To Card
+                                                </button>
+                                              </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <br>
+                                        <div class="card bg-dark text-black">
+                                            <img class="card-img" src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-green-select-2019?wid=1200&hei=630&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1566956144838" style="height: 300px; object-fit: cover;" alt="Card image">
+                                            <div class="card-img-overlay" style="background: rgba(0, 0, 0, .1);">
+                                              <h5 class="card-title">Iphone 11</h5>
+                                              <p class="card-text">
+                                                  Apple iPhone 11 64GB Green
+                                                <br> <strong class="text-danger">$ 700</strong>
+                                                <br>
+                                                <button class="btn btn-sm btn-primary">
+                                                    To Card
+                                                </button>
+                                              </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <br>
+                                        <div class="card bg-dark text-black">
+                                            <img class="card-img" src="https://hnsgsfp.imgix.net/4/images/detailed/49/iphone_11_-_Red_(Front)_994c-ug.JPG?fit=fill&bg=0FFF&w=1536&h=900&auto=format,compress" style="height: 300px; object-fit: cover;" alt="Card image">
+                                            <div class="card-img-overlay" style="background: rgba(0, 0, 0, .1);">
+                                              <h5 class="card-title">Iphone 11</h5>
+                                              <p class="card-text">
+                                                Apple iPhone 11 128GB (PRODUCT)RED
+                                                <br> <strong class="text-danger">$ 700</strong>
+
+                                              </p>
+                                              <button class="btn btn-sm btn-primary">
+                                                    To Card
+                                                </button>
+                                          </div>
+
+                                          </div>
+
+                                           </div>
+                                         </div>
+                                       </div>
+                                     </div>
+                                   </div>
+                                   </div>
+
+   
+<footer class="container">
+    <div class="row">
+      <a href="#"
+        class="list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+        Contact us
+      </a>
+      <a href="#"
+        class="list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+        live chat
+      </a>
+      <a href="#"
+        class="list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+        Shiping
+      </a><a href="#"
+        class="list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+        Term & Conditions
+      </a>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg d-none d-lg-block col pr-0 border">
+        <ul class="list-group">
+          <h5 class=""> Buyers</h5>
+          <a href="#" class="action text-decoration-none  text-danger">how to make an order</a>
+          <a href="#" class="=action text-decoration-none  text-primary">Paymends Methods</a>
+          <a href="#" class="=action text-decoration-none  text-warning">Delivery</a>
+        </ul>
+
+      </div>
+      <div class="col-lg d-none d-lg-block border">
+        <ul class="list-group">
+          <h5 class=""> Company</h5>
+          <a href="#" class="action text-decoration-none  text-danger">About Us</a>
+          <a href="#" class="=action text-decoration-none  text-primary">Requisites</a>
+          <a href="#" class="=action text-decoration-none  text-warning">Press center</a>
+        </ul>
+
+
+      </div>
+      <div class="col-lg d-none d-lg-block  border">
+        <ul class="list-group">
+          <h5 class="">For partners</h5>
+          <a href="#" class="action text-decoration-none  text-danger">affiliate program</a>
+          <a href="#" class="=action text-decoration-none  text-primary">How to start cooperation</a>
+          <a href="#" class="=action text-decoration-none  text-warning">Benefits</a>
+        </ul>
+
+      </div>
+      <div class="col-lg d-none d-lg-block  border">
+        <ul class="list-group">
+          <h5 class="">  We are in social networks</h5>
+          <a href="#" class="action text-decoration-none  text-danger">Twitter</a>
+          <a href="#" class="=action text-decoration-none  text-primary">OK</a>
+          <a href="#" class="=action text-decoration-none  text-warning">Facebook</a>
+        </ul>
+
+      </div>
+      <div class="col-lg d-none d-lg-block border">
+        <ul class="list-group">
+          <h5 class=""> We are in social networks</h5>
+          <a href="#" class="action text-decoration-none text-danger">VK</a>
+          <a href="#" class="=action text-decoration-none  text-Primary">Instagram</a>
+          <a href="#" class="=action text-decoration-none  text-warning">YouTube</a>
+        </ul>
+
+      </div>
+    </div>
+    <nav class="row navbar navbar-secondary bg-success">
+            <div class="d-flex align-items-baseline mx-3">
+             <img src="https://image.flaticon.com/icons/svg/889/889102.svg" class="px-1" width="30px">
+             <img src="https://image.flaticon.com/icons/svg/1384/1384063.svg" class="px-1" width="30px">
+             <img src="https://image.flaticon.com/icons/svg/2965/2965363.svg" class="px-1" width="30px">
+             <img src="https://image.flaticon.com/icons/svg/732/732200.svg" class="px-1" width="30px">
+           </div>
+           <h5>© Tumo Center For Ccreative Technologies</h5>
+         </nav>
+      </footer>
+
+          
+          
+          
+          
+          
+          
+          
+<!-- LoginModal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- RegisterModal -->
+ 
+<div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <form>
+  <div class="row">
+    <div class="col">
+        <div class="form-group">
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+   
+    
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+          
+</form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
